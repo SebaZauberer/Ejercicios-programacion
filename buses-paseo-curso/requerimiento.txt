@@ -1,0 +1,25 @@
+
+Buses a objetos;
+
+Atributos: 
+Capacidad del bus;
+Pasajeros a bordo;
+Asientos Disponibles;
+asignar pasajero al asiento;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
