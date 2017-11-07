@@ -57,6 +57,7 @@ if(!empty($datosPasajeros))
     echo "SIN DATOS.";
 }
 
+//llenar los buses
 for($i = 0; $i < count($personas); $i++){
     if($personas[$i]->getCurso() == "4A"){
         $bus1[] = $personas[$i];
@@ -67,20 +68,15 @@ for($i = 0; $i < count($personas); $i++){
     }
 }
 
-$asiento = 0;
+$bus4A = new BusPaseo($bus1, count($bus1));
+$bus4E = new BusPaseo($bus2, count($bus2));
+$bus4G = new BusPaseo($bus3, count($bus3));
 
-while($asiento <= 43)
-{
-    $bus1[$asiento]->setAsiento(44-$asiento);
-    $bus2[$asiento]->setAsiento(44-$asiento);
-    $bus3[$asiento]->setAsiento(44-$asiento);
-    
-    $asiento++;
-}
+
 
 $busesPaseo = array("Bus 1"=>$bus1, "Bus 2"=>$bus2, "Bus 3"=>$bus3);
 
 echo "<pre>";
-print_r($busesPaseo);
+print_r($bus4A);
 echo "</pre>";
 ?>
